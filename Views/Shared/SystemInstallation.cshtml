@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fuela</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/Fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body style="        background-color: #F2F1F2
+">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 customeNavbar text-light">
+            <div class="container text-light">
+                <a class="navbar-brand" href="#">
+                    <img src="~/Logos/logo1.png" class="logo1" alt="">
+                </a>
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">Fuela</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">System users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Station reg</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Fuel reg</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Meter readings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card cardFuela">
+                    <img class="card-img-top" src="/Images/Fuel_stations/Ps2.jpg" style="height:80%;width:60%" alt="First slide">
+                    <div class="card-body">
+                        <h5 class="card-title">Best Fuel Management System</h5>
+                        <p class="card-text">Be accountable of every single drop of fuel you sell from your fuel station.</p>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Station Reg</button>
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-user-o" aria-hidden="true"></i> &nbsp; Station owner</button>
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-tint" aria-hidden="true"></i> &nbsp; Fuel reg</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div></div>
+        </div>
+            <footer class="border-top footer text-muted">
+                <div class="container">
+                    &copy; 2020 - Fuela - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </footer>
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            @RenderSection("Scripts", required: false)
+</body>
+</html>

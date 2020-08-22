@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Fuela";
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fuela</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/Fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-dark">
+    <div class="container marginct">
+        <div class="card text-center justify-content-center cardFuela">
+            <div class="card-body cardFuela">
+                <img class="logo" src="~/Logos/logo.png" alt="Card image cap">
+
+                <h5 class="card-title">Fuel Management System</h5>
+                <p class="card-text">Pump/Bunk Management Software) is a Complete Accounting & Inventory Software for Petrol Pumps. This Software covers nearly all the functionality of a Petrol Pump/Bunk from Meter Reading to Lubricant Sales, Credit Sales, DIP stock v/s Actual stock, Density, Tank wise stock and lot more…</p>
+            </div>
+            <ul class="list-group list-group-flush cardFuela">
+                <li class="list-group-item cardFuela">
+                    <button class="btn btn-dark"><i class="fa fa-check-circle-o" aria-hidden="true"></i> &nbsp; Start installation</button>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</body>
+<footer class="border-top footer text-muted">
+    <div class="container text-center text-light">
+        &copy; @DateTime.Now.Year - Fuela 
+      <a asp-area="" asp-controller="Home" asp-action="Privacy"></a>
+    </div>
+</footer>
